@@ -1,0 +1,227 @@
+/* ------- reset code ------- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	width: 100%;
+	min-height: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: #ea8a0f;
+	color: #220c1a;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*------- Utility classes ------- */
+.d-flex {
+	display: flex;
+}
+.flex-column {
+	flex-direction: column;
+}
+.text-center {
+	text-align: center;
+}
+.border-2 {
+	border: 2px solid #220c1a;
+}
+.margin-b-1 {
+	margin-bottom: 1rem;
+}
+.margin-b-2 {
+	margin-bottom: 2rem;
+}
+.padd-1 {
+	padding: 1rem;
+}
+.font-half {
+	font-size: 0.75rem;
+}
+/* ------- Main section ------- */
+
+/* ---- FONTS ---- */
+.caveat-font {
+	font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+.lato-black {
+	font-weight: 900;
+}
+.lato-bold {
+	font-weight: 700;
+}
+.lato-light {
+	font-weight: 300;
+}
+.rowdies-bold {
+	font-family: "Rowdies", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.main-wrapper {
+	width: 100%;
+	padding: 0 0.6rem;
+}
+header > h1 {
+	background-color: #220c1a;
+	color: #ea8a0f;
+	font-size: 2rem;
+	margin-top: 2rem;
+}
+
+div.text > p {
+	letter-spacing: 0.2em;
+}
+
+.unfilled-text {
+	text-shadow: 0 0 0.2em #220c1a;
+}
+.dateTime > p:not(:nth-child(3)) {
+	font-size: 1.8rem;
+}
+a.google-link {
+	font-size: 0.875rem;
+	color: #ea8a0f;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #220c1a;
+	padding: 8px;
+	border-radius: 3px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+a.google-link:hover,
+a.google-link:active {
+	background-color: #220c1adb;
+	color: #eca03c;
+}
+footer p {
+	padding: 1rem;
+}
+footer a,
+a:hover,
+a:active {
+	color: #fafafa;
+}
+.animated-text {
+	animation: alternateTransparency 2s infinite;
+}
+@keyframes alternateTransparency {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* --------
+            media queries -------- */
+
+/* mobile layout */
+@media screen and (max-width: 400px) {
+	.flex-column {
+		flex-direction: column;
+	}
+	footer p {
+		padding: 1rem;
+	}
+	footer a:link,
+	footer a:hover,
+	footer a:active {
+		color: #fafafa;
+	}
+}
+
+/* Tablet & desktop layout */
+@media screen and (min-width: 768px) {
+    main {
+        width: 80%;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+	header > h1 {
+		font-size: 2.5rem;
+	}
+	div.image {
+		height: 680px;
+		width: 40%;
+		max-width: 480px;
+	}
+
+	div.ticket > p,
+	.dateTime > p:last-child {
+		font-size: 130%;
+	}
+	div.text {
+		display: flex;
+	}
+	div.text > p {
+		font-size: 1.8rem;
+		writing-mode: vertical-lr;
+		letter-spacing: 0.4em;
+	}
+	.flex-row {
+		flex-direction: row;
+	}
+	.flex-1 {
+		flex: 1;
+	}
+	.gap {
+		gap: 1rem;
+	}
+	.align-center {
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media screen and (min-width: 425px) {
+	header > h1 {
+		font-size: 2.25rem;
+	}
+	div.image {
+		height: 580px;
+	}
+	img {
+		width: 100%;
+		max-height: 100%;
+        object-fit: cover;
+	}
+}
+
+/*
+
+.rowdies-bold {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+*/
